@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}My Site{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+
+  <header class="bg-indigo-600 text-white p-4 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">My Task Manager</h1>
+      <nav class="space-x-4">
+        <a href="{{ url_for('home') }}" class="hover:underline">Home</a>
+        <a href="{{ url_for('task_lists') }}" class="hover:underline">Tasks</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto py-8 flex-1">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="bg-gray-200 text-center p-4 text-sm">
+    © 2025 My Site
+  </footer>
+
+</body>
+</html>
