@@ -1,13 +1,7 @@
-# from app import app
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
-
-
-from flask import Flask
 from livereload import Server
-from app import app
+from app import create_app
 
+app = create_app()
 app.debug = True  # Enable Flask's debug mode for template auto-reloading
 
 if __name__ == '__main__':
