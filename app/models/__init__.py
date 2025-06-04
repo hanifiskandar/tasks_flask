@@ -12,3 +12,4 @@ for filename in os.listdir(models_dir):
 
 # Explicitly expose classes you want to import directly
 from .task import Task
+from .user import User
